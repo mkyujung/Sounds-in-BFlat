@@ -1,0 +1,48 @@
+.btn {
+    padding: 0.8rem 0.8rem; 
+    display: inline-block;
+    transition: all .2s;
+    position: relative;
+    font-size: 1.3rem;
+    border-radius: .7rem;
+    // background-color: rgba(0, 0, 0, 0.4);
+    margin: 1rem;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+        transform: translateY(-3px);
+        // box-shadow: 0 1rem 2rem rgba(black, .2);
+        // background-color: $color-primary;
+
+        &::after {
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+        }
+    }
+    
+    @include respond(phone) { 
+        font-size: 1rem;
+        padding: 0.6rem 0.6rem; 
+        margin: 0rem;
+        border-radius: 0rem;
+      }
+}
+
+.btext {
+    &,
+    &:link,
+    &:visited {
+    color: white;
+    text-decoration: none;
+    padding: 1.2rem 2.2rem; 
+    text-align: center;
+    &:hover { color: white;
+    }
+  }
+  @include respond(phone) { 
+    padding: 4.6rem 2.6rem;
+    
+  }
+}
+  

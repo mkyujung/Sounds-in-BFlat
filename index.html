@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+  <meta charset="UTF-8">
+  <title>Sounds in B Flat</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="css/style.css">
+  <script src="granim.min.js"></script>
+</head>
+<body>
+
+
+<!-- <canvas id="canvas-image-blending"></canvas> -->
+<div class="canvas-interactive-wrapper">
+<canvas id="canvas-interactive"></canvas>
+</div>
+
+<div class="cta-wrapper"> </div>
+
+
+<div class="ambience">
+  <div id="btn--off" class="btn">
+  <a href="#default-state" id="default-state-cta" class="active btext">Off &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</a>
+  </div>
+
+  <div id="btn--rain" class="btn">
+  <a href="#violet-state" id="violet-state-cta" class="btext">Heavy Rain &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp</a>
+  </div>
+
+  <div id="btn--fire" class="btn">
+  <a href="#orange-state" id="orange-state-cta" class='btext'>Warm Fire &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</a>
+  </div>
+
+  <div id="btn--coffee" class="btn">
+  <a href="#coffee-state" id="coffee-state-cta" class='btext'>Coffee Shop &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</a>
+  </div>
+
+</div>
+
+<div>
+<h1 class='heading'>Sounds in B flat</h1>
+
+</div>
+
+<div class ="container">
+  
+  <div class="keys">
+    <div data-key="49" class="key" id="key-49">
+        <kbd class="kbd">1</kbd>
+        <span class="sound">Voice Bflat</span>
+      </div>
+    <div data-key="50" class="key" id="key-50">
+      <kbd class="kbd">2</kbd>
+      <span class="sound">Voice d</span>
+    </div>
+    <div data-key="51" class="key" id="key-51">
+      <kbd class="kbd">3</kbd>
+      <span class="sound">Voice f</span>
+    </div>
+    <div data-key="52" class="key" id="key-52">
+      <kbd class="kbd">4</kbd>
+      <span class="sound">Voice Bflat</span>
+    </div>
+    <div data-key="81" class="key" id="key-81">
+      <kbd class="kbd">Q</kbd>
+      <span class="sound">piano Bflat</span>
+    </div>
+    <div data-key="87" class="key" id="key-87">
+      <kbd class="kbd">W</kbd>
+      <span class="sound">piano d</span>
+    </div>
+    <div data-key="69" class="key" id="key-69">
+      <kbd class="kbd">E</kbd>
+      <span class="sound">piano f</span>
+    </div>
+    <div data-key="82" class="key" id="key-82">
+      <kbd class="kbd">R</kbd>
+      <span class="sound">piano Bflat</span>
+    </div>
+    <div data-key="65" class="key" id="key-65">
+      <kbd class="kbd">A</kbd>
+      <span class="sound">Strings Bflat</span>
+    </div>
+    <div data-key="83" class="key" id="key-83">
+      <kbd class="kbd">S</kbd>
+      <span class="sound">Strings D</span>
+    </div>
+    <div data-key="68" class="key" id="key-68">
+      <kbd class="kbd">D</kbd>
+      <span class="sound">Strings F</span>
+    </div>
+    <div data-key="70" class="key" id="key-70">
+      <kbd class="kbd">F</kbd>
+      <span class="sound">Strings Bflat</span>
+    </div>
+    <div data-key="90" class="key" id="key-90">
+      <kbd class="kbd">Z</kbd>
+      <span class="sound">Cello Bflat</span>
+    </div>
+    <div data-key="88" class="key" id="key-88">
+      <kbd class="kbd">X</kbd>
+      <span class="sound">Cello D</span>
+    </div>
+    <div data-key="67" class="key" id="key-67">
+      <kbd class="kbd">C</kbd>
+      <span class="sound">Cello F</span>
+    </div>
+    <div data-key="86" class="key" id="key-86">
+      <kbd class="kbd">V</kbd>
+      <span class="sound">Cello B flat</span>
+    </div>
+  </div>
+
+  <div class = "test"></div>
+  <div class="loops">
+    <div data-key="56" class="loop" id="key-56">
+      <kbd class="kbd">8</kbd>
+      <span class="sound">mallets</span>
+    </div>
+    <div data-key="57" class="loop" id="key-57">
+      <kbd class="kbd">9</kbd>
+      <span class="sound">e. guitar</span>
+    </div>
+    <div data-key="48" class="loop" id="key-48">
+      <kbd class="kbd">0</kbd>
+      <span class="sound">pad</span>
+    </div>
+    <div data-key="173" class="loop" id="key-173">
+      <kbd class="kbd">-</kbd>
+      <span class="sound">rhodes</span>
+    </div>
+    <div data-key="61" class="loop" id="key-61">
+      <kbd class="kbd">=</kbd>
+      <span class="sound">toy sax</span>
+      </div>
+
+    <div data-key="85" class="loop" id="key-85">
+        <kbd class="kbd">U</kbd>
+        <span class="sound">e. bass</span>
+      </div>
+      <div data-key="73" class="loop" id="key-73">
+        <kbd class="kbd">I</kbd>
+        <span class="sound">trumpet</span>
+      </div>
+    <div data-key="79" class="loop" id="key-79">
+        <kbd class="kbd">O</kbd>
+        <span class="sound">clarinet</span>
+      </div>
+    <div data-key="80" class="loop" id="key-80">
+        <kbd class="kbd">P</kbd>
+        <span class="sound">vocals</span>
+      </div>
+    <div data-key="219" class="loop" id="key-219">
+        <kbd class="kbd">[</kbd>
+        <span class="sound">drone</span>
+      </div>
+
+    <div data-key="72" class="loop" id="key-72">
+        <kbd class="kbd">H</kbd>
+        <span class="sound">omnichord</span>
+      </div>
+    <div data-key="74" class="loop" id="key-74">
+        <kbd class="kbd">J</kbd>
+        <span class="sound">spoken word</span>
+      </div>
+      <div data-key="75" class="loop" id="key-75">
+        <kbd class="kbd">K</kbd>
+        <span class="sound">DS</span>
+      </div>
+    <div data-key="76" class="loop" id="key-76">
+        <kbd class="kbd">L</kbd>
+        <span class="sound">a. guitar</span>
+      </div>
+    <div data-key="59" class="loop" id="key-59">
+        <kbd class="kbd">;</kbd>
+        <span class="sound">balloons</span>
+      </div>
+
+    <div data-key="66" class="loop" id="key-66">
+        <kbd class="kbd">B</kbd>
+        <span class="sound">ebow</span>
+      </div>
+    <div data-key="78" class="loop" id="key-78">
+        <kbd class="kbd">N</kbd>
+        <span class="sound">strings</span>
+      </div>
+      <div data-key="77" class="loop" id="key-77">
+        <kbd class="kbd">M</kbd>
+        <span class="sound">EMX</span>
+      </div>
+    <div data-key="188" class="loop" id="key-188">
+        <kbd class="kbd">,</kbd>
+        <span class="sound">Piano</span>
+      </div>
+    <div data-key="190" class="loop" id="key-190">
+        <kbd class="kbd">.</kbd>
+        <span class="sound">Violin</span>
+      </div>
+
+  </div>
+</div>
+
+  <audio data-key="49" src="sounds/voice-bflat.mp3"></audio>
+  <audio data-key="50" src="sounds/voice-d.mp3"></audio>
+  <audio data-key="51" src="sounds/voice-f.mp3"></audio>
+  <audio data-key="52" src="sounds/voice-bflat2.mp3"></audio>
+  
+  <audio data-key="81" src="sounds/piano-bflat.mp3"></audio>
+  <audio data-key="87" src="sounds/piano-d.mp3"></audio>
+  <audio data-key="69" src="sounds/piano-f.mp3"></audio>
+  <audio data-key="82" src="sounds/piano-bflat2.mp3"></audio>
+  <audio data-key="65" src="sounds/Strings-bflat.mp3"></audio>
+  <audio data-key="83" src="sounds/strings-d.mp3"></audio>
+  <audio data-key="68" src="sounds/strings-f.mp3"></audio>
+  <audio data-key="70" src="sounds/strings-bflat2.mp3"></audio>
+  <audio data-key="90" src="sounds/cello-bflat.mp3"></audio>
+  <audio data-key="88" src="sounds/cello-d.mp3"></audio>
+  <audio data-key="67" src="sounds/cello-f.mp3"></audio>
+  <audio data-key="86" src="sounds/cello-bflat2.mp3"></audio>
+
+  <audio data-key="56" src="sounds/mallets.mp3"></audio>
+  <audio data-key="57" src="sounds/guitar.mp3"></audio>
+  <audio data-key="48" src="sounds/kaos pad.mp3"></audio>
+  <audio data-key="173" src="sounds/rhodes.mp3"></audio>
+  <audio data-key="61" src="sounds/toysax.mp3"></audio>
+  <audio data-key="85" src="sounds/electricbass.mp3"></audio>
+  <audio data-key="73" src="sounds/trumpet.mp3"></audio>
+  <audio data-key="79" src="sounds/clarinet.mp3"></audio>
+  <audio data-key="80" src="sounds/vocals.mp3"></audio>
+  <audio data-key="219" src="sounds/drone.mp3"></audio>
+  <audio data-key="74" src="sounds/spokenword.mp3"></audio>
+  <audio data-key="75" src="sounds/ds.mp3"></audio>
+  <audio data-key="76" src="sounds/acousticguitar.mp3"></audio>
+  <audio data-key="59" src="sounds/balloons.mp3"></audio>
+  <audio data-key="72"src="sounds/omnichord.mp3"></audio>
+  <audio data-key="66"src="sounds/ebow.mp3"></audio>
+  <audio data-key="78"src="sounds/strings.mp3"></audio>
+  <audio data-key="77"src="sounds/emx.mp3"></audio>
+  <audio data-key="188"src="sounds/piano.mp3"></audio>
+  <audio data-key="190"src="sounds/violin.mp3"></audio>
+
+  <audio id="rain" src="sounds/rain.mp3"></audio>
+  <audio id="fire" src="sounds/fire.mp3"></audio>
+  <audio id="coffee" src="sounds/coffee.mp3"></audio>
+
+
+  
+<script>
+
+var granimInstance = new Granim({
+    element: '#canvas-interactive',
+    name: 'interactive-gradient',
+    elToSetClassOn: '.canvas-interactive-wrapper',
+    direction: 'diagonal',
+    isPausedWhenNotInView: true,
+    image : {
+          source: 'forest2-min.jpg',
+          blendingMode: 'multiply',
+          // position: ['right', 'center']
+      },
+    stateTransitionSpeed: 1000,
+    states : {
+        "default-state": {
+            gradients: [
+                ['#B3FFAB', '#12FFF7'],
+                ['#ADD100', '#7B920A'],
+                ['#1A2980', '#26D0CE']
+            ],
+            transitionSpeed: 7000
+        },
+        "violet-state": {
+            gradients: [
+                ['#556270', '#7ea0c4'],
+                ['#485563', '#66c49f']
+            ],
+            transitionSpeed: 7000
+        },
+        "orange-state": {
+            gradients: [ 
+              ['#FF4E50', '#F9D423'],
+              ['#ff9966', '#ff5e62'],
+            ],
+            transitionSpeed: 7000
+        },
+        "coffee-state": {
+            gradients: [ 
+              ['#9D50BB', '#6E48AA'],
+              ['#4776E6', '#8E54E9']
+            ],
+            transitionSpeed: 7000
+        },
+    }
+});
+
+// With jQuery
+$('#default-state-cta').on('click', function(event) {
+    event.preventDefault();
+    granimInstance.changeState('default-state');
+    setClass('#default-state-cta')
+});
+$('#violet-state-cta').on('click', function(event) {
+    event.preventDefault();
+    granimInstance.changeState('violet-state');
+    setClass('#violet-state-cta')
+});
+$('#orange-state-cta').on('click', function(event) {
+    event.preventDefault();
+    granimInstance.changeState('orange-state');
+    setClass('#orange-state-cta')
+});
+$('#coffee-state-cta').on('click', function(event) {
+    event.preventDefault();
+    granimInstance.changeState('coffee-state');
+    setClass('#coffee-state-cta')
+});
+
+function setClass(element) {
+    $('.canvas-interactive-wrapper a').removeClass('active');
+    $(element).addClass('active');
+};
+  </script>
+
+
+
+<script src="script.js"></script>
+<script src="clicks.js"></script>
+
+</body>
+
+<!-- <footer class="footer">
+  Credit to inbflat.net
+</footer> -->
+
+
+
+
+</html>

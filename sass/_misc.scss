@@ -1,0 +1,46 @@
+
+.container {
+    width: 100%;
+    height: 40vh;
+    display: grid;
+    /* grid-template-columns: repeat(3, 1fr); */
+    grid-template-columns: 1fr 0.5fr 1.5fr; 
+  
+      @include respond(tab-port) {
+        grid-template-columns: 1fr;
+    }
+
+      @include respond(phone) {
+        grid-template-rows: 1fr 1fr 1fr;
+        height: 81.5vh;
+        margin-left: 0.3rem;
+    }
+  }
+  
+.ambience {
+  display: flex;
+
+  @include respond(phone) { 
+    display: grid;
+  }
+}
+  // .footer {
+  //   height: 10vh; }
+  
+  body, html {
+    margin: 0;
+    padding: 0; }
+  
+  .playing {
+    transform: scale(1.2);
+    border-color: $color-primary;
+    box-shadow: 0 0 1rem $color-primary; 
+    color: white;
+  }
+
+  .playing2 {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(black, .2);
+    background-color: $color-primary;; 
+  }
+
